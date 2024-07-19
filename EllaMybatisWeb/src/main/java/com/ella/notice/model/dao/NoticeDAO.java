@@ -19,4 +19,18 @@ public class NoticeDAO {
 		return nList;
 	}
 
+	public int deleteNotice(SqlSession session, int noticeNo) {
+		int result = session.delete("NoticeMapper.deleteNotice", noticeNo);
+		return result;
+	}
+
+	public Notice seletOne(SqlSession session, int noticeNo) {
+		Notice notice = session.selectOne("NoticeMapper.selectOne", noticeNo);
+		return notice;
+	}
+
+	public int updateNotice(SqlSession session, Notice notice) {
+		int result = session.update("NoticeMapper.updateNotice", notice);
+		return result;
+	}
 }

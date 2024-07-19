@@ -28,4 +28,20 @@ public class NoticeService {
 		return nList;
 	}
 
+	public int deleteNotice(int noticeNo) {
+		int result = nDao.deleteNotice(conn, noticeNo);
+		return result;
+	}
+	
+	public Notice selectOneByNo(int noticeNo) {
+		Notice notice = nDao.seletOne(conn, noticeNo);
+		return notice;
+	}
+
+	public int updateNotice(Notice notice) {
+		int result = nDao.updateNotice(conn, notice);
+		return result;
+	}
+
+
 }

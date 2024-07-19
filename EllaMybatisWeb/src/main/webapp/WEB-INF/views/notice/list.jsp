@@ -33,7 +33,7 @@
 			<c:forEach items="${nList }" var="notice">
 			<tr>
 				<td>${notice.noticeNo }</td>
-				<td>${notice.noticeSubject }</td>
+				<td><a href="/notice/detail.kh?noticeNo=${notice.noticeNo }">${notice.noticeSubject }</a></td> <!-- 접속하기 위해 a 태그 사용 -->
 				<td>${notice.noticeWriter }</td>
 				<td>${notice.regDate }</td>
 				<td>${notice.viewCount }</td>
